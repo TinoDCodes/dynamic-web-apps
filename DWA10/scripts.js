@@ -10,6 +10,7 @@ const controls = {
   subtract: getElementByDataAttribute("subtract"),
   add: getElementByDataAttribute("add"),
   reset: getElementByDataAttribute("reset"),
+  message: getElementByDataAttribute("message"),
 };
 
 /*---------- EVENT HANDLERS ----------*/
@@ -28,11 +29,18 @@ const handleSubtraction = (event) => {
 };
 
 const handleReset = (event) => {
+  if (countValue === 0) return;
   controls.add.removeAttribute("disabled");
   controls.subtract.removeAttribute("disabled");
 
   countValue = 0;
   updateCountDisplay(countValue);
+
+  // display confirmation message for resetting the count
+  controls.message.style.display = "block";
+  setTimeout(() => {
+    controls.message.style.display = "none";
+  }, 2000);
 };
 
 /*---------- SCRIPT ----------*/

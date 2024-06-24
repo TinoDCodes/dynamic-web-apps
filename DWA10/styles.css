@@ -13,6 +13,13 @@ body {
   color: #ce7d2d;
 }
 
+.message {
+  display: none;
+  color: #007c49;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 .tally_count {
   background-color: #09222a83;
   border-radius: 0.5rem;

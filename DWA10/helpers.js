@@ -30,11 +30,5 @@ export const getElementByDataAttribute = (attribute) => {
 export const updateCountDisplay = (value) => {
   const countDisplay = getElementByDataAttribute("count");
 
-  if (!(countDisplay instanceof HTMLInputElement)) {
-    throw new Error(
-      "The count display element should be an instance of HTMLInputElement"
-    );
-  }
-
   countDisplay.value = value.toString();
 };
