@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tally Count</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" defer src="./scripts.js"></script>
+
+    <!-- SHOELACE COMPONENTS SCRIPT & STYLESHEET -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.1/cdn/themes/light.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.1/cdn/shoelace-autoloader.js"
+    ></script>
+  </head>
+  <body>
+    <h1 class="title">Tally Count</h1>
+    <section class="tally_count">
+      <sl-input
+        type="number"
+        part="count_display"
+        readonly
+        noSpinButtons
+        data-count
+      ></sl-input>
+      <div class="controls">
+        <div class="button_wrapper">
+          <sl-button class="tally_button" variant="default" data-subtract>
+            <sl-icon name="dash-lg" label="Settings"></sl-icon>
+          </sl-button>
+        </div>
+
+        <div class="button_wrapper">
+          <sl-button class="tally_button" variant="default" data-add>
+            <sl-icon name="plus-lg" label="Settings"></sl-icon>
+          </sl-button>
+        </div>
+
+        <div class="reset_button_wrapper">
+          <sl-button class="tally_button" variant="default" data-reset>
+            RESET
+          </sl-button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
