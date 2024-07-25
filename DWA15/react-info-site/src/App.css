@@ -1,17 +1,14 @@
 #root {
   margin: 0;
-}
-
-body {
-  margin: 0;
   padding: 0;
-  background-color: #282d35;
-  color: #ffff;
+  height: 100vh;
 }
 
-.container {
+.app--container {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  color: #ffff;
 }
 
 .navbar {
@@ -20,12 +17,12 @@ body {
   background-color: #21222a;
 }
 
-.logo {
+.navbar--logo {
   width: 30px;
   margin-right: 0.5rem;
 }
 
-.title {
+.navbar--title {
   margin-right: auto;
   font-weight: 700;
   color: #61dafb;
@@ -36,19 +33,23 @@ body {
   padding-inline: 2rem;
   background-image: url("./reactjs-icon-2.png");
   background-repeat: no-repeat;
-  background-position: 100% 1rem;
+  background-position: 100% 25%;
+  background-color: #282d35;
+  height: 100%;
 }
 
-.heading {
+.main--heading {
   font-size: 41px;
   font-weight: 700;
+  letter-spacing: -0.05rem;
 }
 
-.list > li {
+.main--list > li {
   font-size: 16px;
   padding-block: 0.5rem;
 }
 
-.list > li::marker {
+.main--list > li::marker {
   color: #61dafb;
+  font-size: 1.4rem;
 }

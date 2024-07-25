@@ -3,9 +3,9 @@ import React from "react";
 function MainContent() {
   return (
     <main className="main">
-      <h2 className="heading">Fun facts about React</h2>
+      <h2 className="main--heading">Fun facts about React</h2>
 
-      <ul className="list">
+      <ul className="main--list">
         <li>Was first released in 2013</li>
         <li>Was originally created by Jordan Walke</li>
         <li>Has well over 100K stars on GitHub</li>
