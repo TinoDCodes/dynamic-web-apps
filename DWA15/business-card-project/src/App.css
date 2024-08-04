@@ -1,0 +1,126 @@
+#root {
+  font-family: "Roboto";
+  height: 100vh;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.personal_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  color: #2b283a;
+  padding-bottom: 0.5rem;
+}
+
+.personal_info--picture {
+  width: 100%;
+  height: 220px;
+}
+
+.personal_info--name {
+  margin-top: 1.2rem;
+  margin-bottom: 0.3rem;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.personal_info--job {
+  margin: 0;
+  font-size: 12.8px;
+  font-weight: 400;
+  color: #f47d27;
+}
+
+.personal_info--website {
+  font-size: 10.24px;
+  font-weight: normal;
+}
+
+.personal_info--email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: inherit;
+  gap: 0.4rem;
+  height: 34px;
+  width: 247px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.about {
+  height: 100%;
+  background-color: #f5f5f5;
+  padding-inline: 2.8rem;
+  padding-block: 2rem;
+}
+
+.about--sub_heading {
+  color: #2b283a;
+  margin-bottom: 0.3rem;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.about--paragraph {
+  font-size: 10.24px;
+  color: #4a4e74;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-top: auto;
+  background-color: #d5d4d8;
+  padding-block: 0.8rem;
+}
+
+.footer--link_item {
+  height: 25px;
+  width: 25px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .personal_info {
+    background-color: #1a1b21;
+    color: #ffff;
+  }
+
+  .personal_info--job {
+    color: #f3bf99;
+  }
+
+  .personal_info--email {
+    border: none;
+    color: #374151;
+  }
+
+  .about {
+    background-color: #1a1b21;
+    color: #ffff;
+  }
+
+  .about--sub_heading {
+    color: inherit;
+  }
+
+  .about--paragraph {
+    font-size: 10.24px;
+    color: #dcdcdc;
+  }
+
+  .footer {
+    background-color: #161619;
+  }
+}
