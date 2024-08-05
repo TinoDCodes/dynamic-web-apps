@@ -1,0 +1,86 @@
+.app {
+  height: 100vh;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #f55a5a;
+  padding-block: 1rem;
+  gap: 0.5rem;
+  color: #ffffff;
+}
+
+.navbar--globe {
+  height: 1.5rem;
+}
+
+.navbar--text {
+  margin: 0;
+  padding: 0;
+  font-size: 0.938rem;
+  font-weight: 500;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.travels {
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  width: 100%;
+  height: 10.5rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.card--details {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #2b283a;
+}
+
+.card--details-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card--location_name {
+  font-size: 0.64rem;
+  font-weight: 400;
+  letter-spacing: calc(0.17 * 16px);
+}
+
+.card--location_link {
+  font-size: 0.64rem;
+  font-weight: 400;
+  color: #918e9b;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card--title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card--details_dates {
+  margin: 0;
+  font-size: 0.64rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.card--details_description {
+  font-size: 0.64rem;
+  font-weight: 400;
+}
