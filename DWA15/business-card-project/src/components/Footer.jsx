@@ -7,7 +7,7 @@ function Footer() {
         <img src="/twitter.svg" alt="twitter" className="footer--link_item" />
       </a>
 
-      <a href="#">
+      <a href="https://www.facebook.com/" target="_blank">
         <img src="/facebook.svg" alt="facebook" className="footer--link_item" />
       </a>
 
