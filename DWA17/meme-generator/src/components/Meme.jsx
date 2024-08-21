@@ -1,35 +1,37 @@
-import React from "react";
-import memesData from "../memeData";
+import React, { useEffect, useState } from "react";
 
 export default function Meme() {
-  const [meme, setMeme] = React.useState({
+  const [meme, setMeme] = useState({
     topText: "",
     bottomText: "",
     randomImage: "http://i.imgflip.com/1bij.jpg",
   });
-  const [allMemeImages, setAllMemeImages] = React.useState(memesData);
+  const [allMemes, setAllMemes] = useState([]);
+
+  useEffect(() => {
+    async function getMemesData() {
+      await fetch("https://api.imgflip.com/get_memes")
+        .then((res) => res.json())
+        .then(({ data }) => setAllMemes(data.memes));
+    }
+
+    getMemesData();
+  }, []);
 
   function getMemeImage() {
-    const { memes } = allMemeImages.data;
-    const randomIndex = Math.floor(Math.random() * memes.length);
-    const { url } = memes[randomIndex];
+    const randomIndex = Math.floor(Math.random() * allMemes.length);
+    const { url } = allMemes[randomIndex];
     setMeme((prevMeme) => ({
       ...prevMeme,
       randomImage: url,
     }));
   }
 
-  function handleChangeTopText(text) {
+  function handleChangeText(event) {
+    const { name, value } = event.target;
     setMeme((prevMeme) => ({
       ...prevMeme,
-      topText: text,
-    }));
-  }
-
-  function handleChangeBottomText(text) {
-    setMeme((prevMeme) => ({
-      ...prevMeme,
-      bottomText: text,
+      [name]: value,
     }));
   }
 
@@ -47,14 +49,18 @@ export default function Meme() {
           type="text"
           placeholder="Shut up"
           aria-label="meme-top-text"
-          onChange={(e) => handleChangeTopText(e.target.value)}
+          name="topText"
+          value={meme.topText}
+          onChange={handleChangeText}
           className="form--input"
         />
         <input
           type="text"
           placeholder="And take my money"
           aria-label="meme-bottom-text"
-          onChange={(e) => handleChangeBottomText(e.target.value)}
+          name="bottomText"
+          value={meme.bottomText}
+          onChange={handleChangeText}
           className="form--input"
         />
         <button className="form--button" onClick={getMemeImage}>
@@ -64,8 +70,8 @@ export default function Meme() {
 
       <section className="meme--image-container">
         <img src={meme.randomImage} alt="Meme Image" className="meme--image" />
-        <h2 className="meme--top-text">{meme.topText}</h2>
-        <h2 className="meme--bottom-text">{meme.bottomText}</h2>
+        <h2 className="meme--text top-text">{meme.topText}</h2>
+        <h2 className="meme--text bottom-text">{meme.bottomText}</h2>
       </section>
     </main>
   );
